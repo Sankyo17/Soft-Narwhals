@@ -140,7 +140,7 @@ public class PlayTicTacToe {
 		int player = 2;
 		
 		drawBoard(board);
-			while(!win(board, player) && playerOneReady == 1 && playerTwoReady == 1) {
+			while(!win(board, player) && playerOneReady == 1 && playerTwoReady == 1 && !draw(board , turns)) {
 				if (player == 1) {
 					player = 2;
 					playerWinName = playerTwoName;
@@ -162,14 +162,19 @@ public class PlayTicTacToe {
 							break;
 						} if(player == 2) {
 							token = 'O';
+							turns++;
 							break;
 						}
 					}
 				}//end while(true)
 				drawBoard(board);
 			}//end while(!win(board, player) && playerOneReady == 1 && playerTwoReady == 1)
-			System.out.println(playerWinName + " wins!");
-			System.out.println();
+			if(win(board , player)) {
+				System.out.println(playerWinName + " wins!");
+				System.out.println();
+			} else if (draw(board , turns)) {
+				System.out.println("It's a draw! \nGood Game " + playerOneName + " and " + playerTwoName + "!");
+			}
 			System.out.println("Do you want to play again? ");
 			
 			ready(playerOneName , playerTwoName);
