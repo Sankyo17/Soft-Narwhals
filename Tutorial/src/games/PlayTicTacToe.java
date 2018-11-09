@@ -175,6 +175,7 @@ public class PlayTicTacToe {
 			} else if (draw(board , turns)) {
 				System.out.println("It's a draw! \nGood Game " + playerOneName + " and " + playerTwoName + "!");
 			}
+			System.out.println();
 			System.out.println("Do you want to play again? ");
 			
 			ready(playerOneName , playerTwoName);
