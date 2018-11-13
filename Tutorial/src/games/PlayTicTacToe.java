@@ -51,7 +51,7 @@ public class PlayTicTacToe {
 			}else {
 				return false;
 			}
-		}else if(player == 2) {
+		}else if(player == 2) { 
 			if(board[0][0] == playerTwoToken && board[0][1] == playerTwoToken && board[0][2] == playerTwoToken) {
 				return true;
 			}else if(board[1][0] == playerTwoToken && board[1][1] == playerTwoToken && board[1][2] == playerTwoToken) {
@@ -131,7 +131,6 @@ public class PlayTicTacToe {
 			System.out.println("Goodbye!");
 		}
 	}//end ready
-	
 	public static void startGame(int playerOneReady , int PlayerTwoReady) {
 		Scanner in = new Scanner(System.in);
 		while(playerOneReady == 1 && playerTwoReady == 1) {
@@ -185,5 +184,4 @@ public class PlayTicTacToe {
 	public static void main(String[] args) {
 		name();
 	}//end main
-
 }//end class
