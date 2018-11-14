@@ -31,41 +31,47 @@ public class ArrayListiPod {
 					+ artists.get(i));
 		}//end for
 		System.out.println();
+			while (choice != 4) 
+			{
+				int choice = 0;
+					System.out.println("Select menu option: \n" + 
+					"1. Add song to Library \n" + 
+					"2. Delete song from Library \n" + 
+					"3. Add song to Party Playlist \n" + 
+					"4. Exit");
 		
-		System.out.println("Select menu option: \n" + 
-		"1. Add song to Library \n" + 
-		"2. Delete song from Library \n" + 
-		"3. Add song to Party Playlist");
+					Scanner input = new Scanner(System.in);
+					choice = input.nextInt();
 		
-		Scanner input = new Scanner(System.in);
-		int choice = input.nextInt();
-		
-			while (choice != 0) {
-				if(choice == 1) {//add song
-					input.nextLine();//clear extra enter character
-					System.out.print("Enter title: ");
-					allSongs.add(input.nextLine());
-					System.out.println("Enter artist name: ");
-					artists.add(input.nextLine());
-				}
-				else if(choice == 2) {//delete from Library
-					System.out.println("Enter song number to delete: ");
-					if(input.nextInt()-1 > allSongs.size()) {
-						System.out.println("That is an invalid number");
-					}else {
-						allSongs.remove(input.nextInt()-1);
-						artists.remove(input.nextInt()-1);
-					}
 			
-				}
-				else if(choice == 3) {//add song to PartyPlayList
-					System.out.print("Enter title: ");
-					partyPlayList.add(input.nextLine());
-			
-			
-				}
-		
-		}
+				switch(choice) {
+					case 1: 
+						input.nextLine();//clear extra enter character
+						System.out.print("Enter title: ");
+						allSongs.add(input.nextLine());
+						System.out.println("Enter artist name: ");
+						artists.add(input.nextLine());
+						break;
+					case 2:
+						System.out.println("Enter song number to delete: ");
+						int delete = input.nextInt();
+						allSongs.remove(delete);
+						artists.remove(delete);
+						break;
+					case 3:
+						partyPlayList.add(allSongs.get(input.nextInt()));
+						break;
+					case 4:
+						System.out.println("Bye");
+						break;
+					default:
+						System.out.println("Invalid choice");
+				}//end switch
+			for(int i = 0; i <allSongs.size(); i ++) {
+				System.out.println((i + 1) + " " + allSongs.get(i) + " " 
+						+ artists.get(i));
+			}//end for
+		}//end while
 	}//end main
 
 }//end class
