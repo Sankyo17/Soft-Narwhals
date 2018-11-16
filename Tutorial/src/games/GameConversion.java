@@ -1,17 +1,17 @@
 package games;
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 public class GameConversion {
 	static int UserHP= 50;
 	static Scanner input = new Scanner(System.in);
-	static int choice = input.nextInt();
+	static int choice;
 	static ArrayList<String> Backpack = new ArrayList<String>(); 
 	public static void main(String[] args) {
 		System.out.println ("This game will be based on your choices.");
 		 //System.out.printlns "This game will be based on your choices."
 		System.out.println ("Choose Wisely.");
 		// System.out.printlns "Choose Wisely.
+		System.out.println();
 		// sets UserHP to 50
 		// makes a backpack which will be filled with items during gameplay
 		 YourRoom();
@@ -42,14 +42,15 @@ public class GameConversion {
 		  // System.out.printlns "You know you have to make quick decisions."
 		  //thread.sleep(3000);
 		  //thread.sleeps the program for 3 seconds
-		  System.out.println ("Your options are: \n +"
+		  System.out.println();
+		  System.out.println ("Your options are: \n"
 		  		+ "1: Jump out the Window(Potential Danger) \n" 
 				+ "2: Walk out of the Room(Potential Danger)");
 		  // System.out.printlns "Your options are
 		  // 1: Jump out the Window(Potential Danger)
 		  // 2: Walk out of the Room(Potential Danger)
-		  
-		  System.out.println("Enter a Number for your Choice, Remember Both have potential Danger");
+		  System.out.println();
+		  System.out.println("Enter a Number for your Choice, Remember Both have potential Danger.");
 		  // makes the variable choice and System.out.printlns "Enter a number for your Choice, Remember both have potential Danger"
 		  choice = input.nextInt();
 		  if (choice == 1) {
@@ -88,6 +89,7 @@ public class GameConversion {
 		  //System.out.printlns You head a noise coming from the basement
 		  //thread.sleep(3000);
 		  //thread.sleeps the program for 3 seconds
+		  System.out.println();
 		  System.out.println ("Go to see what caused the noise? or Stay?");
 		  // System.out.printlns "Go to see what caused the noise? or Stay?"
 		  
@@ -126,12 +128,13 @@ public class GameConversion {
 		  // System.out.printlns There is however clothes for you to take
 		  //thread.sleep(3000);
 		  // thread.sleeps the program for 3 seconds
+		  System.out.println();
 		  System.out.println ("Would you like to take these clothes?");
 		  // System.out.printlns Would you like to take these clothes?
 		  //thread.sleep(3000);
 		  // thread.sleeps the program for 3 seconds
 		  
-		  System.out.println("Say 1 to take clothes. Say 2 to leave them");
+		  System.out.println("Say 1 to take clothes. Say 2 to leave them.");
 		  choice = input.nextInt();
 		  // makes the choice variable and System.out.printlns "Say yes to take clothes. Say no to leave them"
 		  if(choice == 1 && !Backpack.contains("Clothes")) {
@@ -174,7 +177,8 @@ public class GameConversion {
 		  // System.out.printlns "You do not know what the passcode to turn off the alarm is."
 		  //thread.sleep(3000);
 		  // thread.sleeps the program for 3 seconds 
-		  System.out.println ("Your choices are \n "
+		  System.out.println();
+		  System.out.println ("Your choices are: \n"
 		  		+ "1. Continue Through the door anyways. \n"
 		  		+ "2. Go back to the kitchen");
 		  // System.out.printlns Your choices are
@@ -954,6 +958,8 @@ public class GameConversion {
 			      //thread.sleep(3000);
 			      //sleeps the program for 3 seconds
 			      System.out.println ("You die sorry.");
+			      Backpack.remove("Shotgun");
+			      Backpack.remove("Pistol");
 			      // System.out.printlns "You die sorry."
 			      //thread.sleep(3000);
 			      // sleeps the program for 3 seconds
@@ -967,6 +973,8 @@ public class GameConversion {
 			      //thread.sleep(3000);
 			      // sleeps the program for 3 seconds
 			      System.out.println ("Try again");
+			      Backpack.remove("Shotgun");
+			      Backpack.remove("Pistol");
 			      // System.out.printlns "Try again"
 			      //thread.sleep(2000);
 			      // sleeps the program for 2 seconds
