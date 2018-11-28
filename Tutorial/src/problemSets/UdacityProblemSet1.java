@@ -21,7 +21,6 @@ public class UdacityProblemSet1 {
         System.out.print("Hello");
         System.out.println("World");
         
-       
 	}
 
 }
