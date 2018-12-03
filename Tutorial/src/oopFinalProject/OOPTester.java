@@ -27,7 +27,7 @@ public class OOPTester {
 			
 			//do not modify code below
 			public static void runInvoice(OOPCustomer c, OOPInvoice i) {
-				i.printOOPInvoice();
+				i.printInvoice();
 
 				if(c.getEvilFunds()- i.amountDue() < 0) {
 					System.out.println("Evil villian credit union to the rescue!!");	

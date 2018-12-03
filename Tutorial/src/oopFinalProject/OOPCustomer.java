@@ -37,6 +37,9 @@ public class OOPCustomer {
 	public int getEvilFunds() {
 		return evilFunds;
 	}//end getEvilFunds
+	public void setEvilFunds(int evilFunds) {
+		this.evilFunds = evilFunds;
+	}//end setEvilFunds
 	/**
 	 * @return customer info
 	 */
