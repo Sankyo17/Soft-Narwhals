@@ -1,36 +1,34 @@
 package oopFinalProject;
+import java.util.ArrayList;
 
 public class OOPInvoice {
 	private OOPCustomer theCustomer;
-	private OOPCustomer evilFunds;
-	private OOPCustomer name;
-	private OOPLineItem items;
-	private OOPLineItem Qty;
-	private OOPProduct productName;
-	private OOPProduct price;
-	private boolean CanAfford;
-	private double AmountDue;
+	private ArrayList<OOPLineItem> items = new ArrayList<>();
+	private OOPProduct theProduct;
+	private OOPLineItem theLineItem;
+	boolean CanAfford;
+	int i;
 	
 	public OOPInvoice(OOPCustomer theCustomer) {
 		this.theCustomer = theCustomer;
 	}//end OOPInvoice
 	
-	public void add(String Product , int Qty) {
-		items += Product;
-		items += Qty;
+	public void add(OOPProduct Product, int Qty) {
+		items.add(new OOPLineItem (Product , Qty));
 	}//end add
 	
 	public void printInvoice() {
-		int creditUnion = 1000000;
-		System.out.println("LineItem: \n Product Name: " +
-				productName + "\n Price: $" +
-				price + "\n Quantity: " + Qty + "\n Total: " + (price * Qty));
+		for(int i = 0; i < items.size(); i++) {
+			System.out.println("Line Item " + (i + 1) + ": " + items.get(i).getTheProduct().getProductName() 
+			+ "\n Price: $" + items.get(i).getTheProduct().getPrice() + "\n Quantity: " 
+			+ items.get(i).getQty()+ "\n Total: " + amountDue());
+		}
 		if(CanAfford == true) {
 			System.out.println("Purchase Approved");
 		}
 	}//end printInvoice
 	public boolean canAfford(OOPCustomer theCustomer) {
-		if(AmountDue > evilFunds.getEvilFunds()) {
+		if(amountDue() > theCustomer.getEvilFunds()) {
 			CanAfford = false;
 			return false;
 		} else {
@@ -39,8 +37,7 @@ public class OOPInvoice {
 		}
 	}//end canAfford
 	public double amountDue() {
-		AmountDue = price * Qty;
-		return AmountDue;
+		return items.get(i).getTheProduct().getPrice() * items.get(i).getQty();
 	}//end amountDue
 
 }//end OOPInvoice
