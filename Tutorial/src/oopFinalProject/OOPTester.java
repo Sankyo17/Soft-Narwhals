@@ -20,27 +20,27 @@ public class OOPTester {
 				//invoice run 2
 				c = new OOPCustomer("castle", "Bowser", 1230);
 				in = new OOPInvoice(c);
-				in.add(new OOPProduct("flame Thower",123.80), 3);
-				in.add(new OOPProduct("sharks", 105.2),2);
-				in.add(new OOPProduct("lasers",50.5),20);
+				in.add(new OOPProduct("Fire Ball",130.39), 18);
+				in.add(new OOPProduct("Shell Repair Kit", 183.65),37);
+				in.add(new OOPProduct("Peach Body Pillow",122.57),6);
 				
 				runInvoice(c,in); //runs invoice
 				
 				//invoice run 3
 				c = new OOPCustomer("ice cave", "Megatron", 1230);
 				in = new OOPInvoice(c);
-				in.add(new OOPProduct("flame Thower",123.80), 3);
-				in.add(new OOPProduct("sharks", 105.2),2);
-				in.add(new OOPProduct("lasers",50.5),20);
+				in.add(new OOPProduct("Blaster",33.65), 48);
+				in.add(new OOPProduct("Metal Sword", 172.98),41);
+				in.add(new OOPProduct("Jet Rockets",110.99),18);
 				
 				runInvoice(c,in); //runs invoice
 				
 				//invoice run 4
 				c = new OOPCustomer("Gotham City", "Joker", 1230);
 				in = new OOPInvoice(c);
-				in.add(new OOPProduct("flame Thower",123.80), 3);
-				in.add(new OOPProduct("sharks", 105.2),2);
-				in.add(new OOPProduct("lasers",50.5),20);
+				in.add(new OOPProduct("Explosive Balloons",174.34), 46);
+				in.add(new OOPProduct("Razor Sharp Playing Cards", 177.97),42);
+				in.add(new OOPProduct("Gun",165.70),39);
 				
 				runInvoice(c,in); //runs invoice
 				

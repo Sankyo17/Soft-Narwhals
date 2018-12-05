@@ -27,6 +27,7 @@ public class OOPInvoice {
 				System.out.println();
 			}
 			System.out.println("Total Amount Due: $" + amountDue());
+			System.out.println();
 		
 		if(CanAfford == true) {
 			System.out.println("Purchase Approved");
