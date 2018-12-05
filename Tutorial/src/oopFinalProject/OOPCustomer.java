@@ -44,8 +44,8 @@ public class OOPCustomer {
 	 * @return customer info
 	 */
 	public String toString() {
-		return "Name: " + name + "\nAddress: " +
-	address + "\nEvil Funds: " + evilFunds;
+		return "Name: " + name + "\n Address: " +
+	address + "\n Evil Funds: $" + evilFunds;
 	}//end toString
 	/**
 	 * Adds funds to evilFunds

@@ -30,7 +30,7 @@ public class OOPProduct {
 	 * @return product and price of product
 	 */
 	public String toString() {
-		return "Product name: " + productName + "\nPrice: $" + price;
+		return "Product name: " + productName + "\n Price: $" + price;
 	}//end toString
 
 }//end OOPProduct

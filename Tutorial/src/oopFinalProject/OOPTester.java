@@ -9,16 +9,16 @@ public class OOPTester {
 		// make sure in at least one of the runs the customer can not afford the purchase
 				
 				//invoice run 1
-				OOPCustomer c = new OOPCustomer("island", "Dr evil", 1230);
+				OOPCustomer c = new OOPCustomer("Island", "Dr evil", 1230);
 				OOPInvoice in = new OOPInvoice(c);
-				in.add(new OOPProduct("flame Thower",123.80), 3);
-				in.add(new OOPProduct("sharks", 105.2),2);
-				in.add(new OOPProduct("lasers",50.5),20);
+				in.add(new OOPProduct("Flame Thower",123.80), 3);
+				in.add(new OOPProduct("Sharks", 105.2),2);
+				in.add(new OOPProduct("Lasers",50.5),20);
 				
 				runInvoice(c,in); //runs invoice
 				
 				//invoice run 2
-				c = new OOPCustomer("island", "Dr evil", 1230);
+				c = new OOPCustomer("castle", "Bowser", 1230);
 				in = new OOPInvoice(c);
 				in.add(new OOPProduct("flame Thower",123.80), 3);
 				in.add(new OOPProduct("sharks", 105.2),2);
@@ -27,7 +27,7 @@ public class OOPTester {
 				runInvoice(c,in); //runs invoice
 				
 				//invoice run 3
-				c = new OOPCustomer("island", "Dr evil", 1230);
+				c = new OOPCustomer("ice cave", "Megatron", 1230);
 				in = new OOPInvoice(c);
 				in.add(new OOPProduct("flame Thower",123.80), 3);
 				in.add(new OOPProduct("sharks", 105.2),2);
@@ -36,7 +36,7 @@ public class OOPTester {
 				runInvoice(c,in); //runs invoice
 				
 				//invoice run 4
-				c = new OOPCustomer("island", "Dr evil", 1230);
+				c = new OOPCustomer("Gotham City", "Joker", 1230);
 				in = new OOPInvoice(c);
 				in.add(new OOPProduct("flame Thower",123.80), 3);
 				in.add(new OOPProduct("sharks", 105.2),2);

@@ -7,7 +7,7 @@ public class OOPInvoice {
 	private OOPProduct theProduct;
 	private OOPLineItem theLineItem;
 	boolean CanAfford;
-	int i;
+	
 	
 	public OOPInvoice(OOPCustomer theCustomer) {
 		this.theCustomer = theCustomer;
@@ -18,11 +18,16 @@ public class OOPInvoice {
 	}//end add
 	
 	public void printInvoice() {
-		for(int i = 0; i < items.size(); i++) {
-			System.out.println("Line Item " + (i + 1) + ": " + items.get(i).getTheProduct().getProductName() 
-			+ "\n Price: $" + items.get(i).getTheProduct().getPrice() + "\n Quantity: " 
-			+ items.get(i).getQty()+ "\n Total: " + amountDue());
-		}
+		
+			System.out.println(theCustomer.toString());
+			System.out.println();
+			for(int i = 0; i < items.size(); i++) {
+				System.out.println(items.get(i).toString() + "\n Total: $" 
+			+ (items.get(i).getTheProduct().getPrice() * items.get(i).getQty()));
+				System.out.println();
+			}
+			System.out.println("Total Amount Due: $" + amountDue());
+		
 		if(CanAfford == true) {
 			System.out.println("Purchase Approved");
 		}
@@ -37,7 +42,11 @@ public class OOPInvoice {
 		}
 	}//end canAfford
 	public double amountDue() {
-		return items.get(i).getTheProduct().getPrice() * items.get(i).getQty();
+		double totalDue = 0;
+		for(int i = 0; i < items.size(); i++) {
+			totalDue += items.get(i).getTheProduct().getPrice() * items.get(i).getQty();
+		}
+		return totalDue;
 	}//end amountDue
 
 }//end OOPInvoice
