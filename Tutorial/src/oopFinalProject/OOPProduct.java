@@ -1,5 +1,7 @@
 package oopFinalProject;
 
+import java.text.DecimalFormat;
+
 public class OOPProduct {
 	private String productName;
 	private double price;
@@ -30,7 +32,7 @@ public class OOPProduct {
 	 * @return product and price of product
 	 */
 	public String toString() {
-		return "Product name: " + productName + "\n Price: $" + price;
+		return "Product name: " + productName + "\n Price: $" + (new DecimalFormat("##.00").format(getPrice()));
 	}//end toString
 
 }//end OOPProduct

@@ -1,5 +1,7 @@
 package oopFinalProject;
 
+import java.text.DecimalFormat;
+
 public class OOPCustomer {
 	private String address;
 	private String name;
@@ -44,8 +46,8 @@ public class OOPCustomer {
 	 * @return customer info
 	 */
 	public String toString() {
-		return "Name: " + name + "\n Address: " +
-	address + "\n Evil Funds: $" + evilFunds;
+		return "Current Order: \nName: " + name + "\n Address: " +
+	address + "\n Evil Funds: $" + (new DecimalFormat("##.00").format(getEvilFunds()));
 	}//end toString
 	/**
 	 * Adds funds to evilFunds

@@ -6,8 +6,6 @@ public class OOPInvoice {
 	private ArrayList<OOPLineItem> items = new ArrayList<>();
 	private OOPProduct theProduct;
 	private OOPLineItem theLineItem;
-	boolean CanAfford;
-	
 	
 	public OOPInvoice(OOPCustomer theCustomer) {
 		this.theCustomer = theCustomer;
@@ -22,24 +20,21 @@ public class OOPInvoice {
 			System.out.println(theCustomer.toString());
 			System.out.println();
 			for(int i = 0; i < items.size(); i++) {
-				System.out.println(items.get(i).toString() + "\n Total: $" 
-			+ (items.get(i).getTheProduct().getPrice() * items.get(i).getQty()));
+				System.out.printf(items.get(i).toString() + "\n Total: $%.2f\n", 
+			 (items.get(i).getTheProduct().getPrice() * items.get(i).getQty()));
 				System.out.println();
 			}
-			System.out.println("Total Amount Due: $" + amountDue());
+			System.out.printf("Total Amount Due: $%.2f\n" , amountDue());
 			System.out.println();
-		
-		if(CanAfford == true) {
-			System.out.println("Purchase Approved");
-		}
+			
+			canAfford(theCustomer);
+	
 	}//end printInvoice
 	public boolean canAfford(OOPCustomer theCustomer) {
-		if(amountDue() > theCustomer.getEvilFunds()) {
-			CanAfford = false;
-			return false;
-		} else {
-			CanAfford = true;
+		if(amountDue() <= theCustomer.getEvilFunds()) {
 			return true;
+		} else {
+		return false;
 		}
 	}//end canAfford
 	public double amountDue() {
