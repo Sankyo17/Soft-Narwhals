@@ -1,14 +1,11 @@
 package oopFinalProject;
-
 import java.text.DecimalFormat;
-
 public class OOPCustomer {
 	private String address;
 	private String name;
 	private int evilFunds;
-	
 	/**
-	 * 
+	 * Takes in customer's information from OOPTester class
 	 * @param address
 	 * @param name
 	 * @param evilFunds
@@ -17,23 +14,23 @@ public class OOPCustomer {
 		this.address = address;
 		this.name = name;
 		this.evilFunds = evilFunds;
-	}//end OOPCustomer(String,String,int)
+	}//end OOPCustomer
 	/**
-	 * 
+	 * Get's the address of customer from OOPCustomer class 
 	 * @return address of customer
 	 */
 	public String getAddress() {
 		return address;
 	}//end getAddress
 	/**
-	 * 
+	 * Get's the name of customer form OOPCustomer class
 	 * @return name of customer
 	 */
 	public String getName() {
 		return name;
 	}//end getName
 	/**
-	 * 
+	 * Get's the amount of evil funds the customer has from OOPCustomer class
 	 * @return evil funds of customer
 	 */
 	public int getEvilFunds() {
@@ -43,6 +40,8 @@ public class OOPCustomer {
 		this.evilFunds = evilFunds;
 	}//end setEvilFunds
 	/**
+	 * Statement that formats customer's inputed info from the OOPTester class 
+	 * to the OOPCustomer class
 	 * @return customer info
 	 */
 	public String toString() {
@@ -56,5 +55,4 @@ public class OOPCustomer {
 	public void addFunds(double funds) {
 		evilFunds += funds;
 	}//end addFunds
-
 }//end OOPCustomer

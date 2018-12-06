@@ -56,6 +56,7 @@ public class OOPTester {
 					System.out.println("Evil villian credit union to the rescue!!");	
 					c.addFunds(i.amountDue() - c.getEvilFunds());
 					System.out.println("New funds total: $" + (new DecimalFormat("##.00").format(c.getEvilFunds())));
+					System.out.println();
 				}
 				
 				i.printInvoice();

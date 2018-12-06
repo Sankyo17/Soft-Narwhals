@@ -27,7 +27,9 @@ public class OOPInvoice {
 			System.out.printf("Total Amount Due: $%.2f\n" , amountDue());
 			System.out.println();
 			
-			canAfford(theCustomer);
+			if(canAfford() == true) {
+				System.out.println("Purchase Approved!");
+			}
 	
 	}//end printInvoice
 	public boolean canAfford(OOPCustomer theCustomer) {
