@@ -31,7 +31,7 @@ public class OOPLineItem {
 	 * from OOPProduct class and qty of product wanted 
 	 */
 	public String toString() {
-		return theProduct + "\n Quantity: " + qty;
+		return theProduct + "\n  Quantity: " + qty;
 	}//end toString
 
 }//end OOPLineItem

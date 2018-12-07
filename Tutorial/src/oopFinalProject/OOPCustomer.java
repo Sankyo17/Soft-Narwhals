@@ -3,12 +3,12 @@ import java.text.DecimalFormat;
 public class OOPCustomer {
 	private String address;
 	private String name;
-	private int evilFunds;
+	private double evilFunds;
 	/**
 	 * Takes in customer's information from OOPTester class
-	 * @param address
-	 * @param name
-	 * @param evilFunds
+	 * @param address - location of customer 
+	 * @param name - name of customer
+	 * @param evilFunds - amount of evil funds the customer has 
 	 */
 	public OOPCustomer(String address , String name , int evilFunds) {
 		this.address = address;
@@ -33,7 +33,7 @@ public class OOPCustomer {
 	 * Get's the amount of evil funds the customer has from OOPCustomer class
 	 * @return evil funds of customer
 	 */
-	public int getEvilFunds() {
+	public double getEvilFunds() {
 		return evilFunds;
 	}//end getEvilFunds
 	public void setEvilFunds(int evilFunds) {
@@ -45,12 +45,12 @@ public class OOPCustomer {
 	 * @return customer info
 	 */
 	public String toString() {
-		return "Current Order: \nName: " + name + "\n Address: " +
-	address + "\n Evil Funds: $" + (new DecimalFormat("##.00").format(getEvilFunds()));
+		return "Current Order: \n Name: " + name + "\n  Address: " +
+	address + "\n  Evil Funds: $" + (new DecimalFormat("##.00").format(getEvilFunds()));
 	}//end toString
 	/**
 	 * Adds funds to evilFunds
-	 * @param funds 
+	 * @param funds - amount of money wanted to add to evil funds 
 	 */
 	public void addFunds(double funds) {
 		evilFunds += funds;

@@ -22,8 +22,8 @@ public class OOPTester {
 				//invoice run 2
 				c = new OOPCustomer("castle", "Bowser", 4940);
 				in = new OOPInvoice(c);
-				in.add(new OOPProduct("Fire Ball",130.39), 18);
-				in.add(new OOPProduct("Shell Repair Kit", 183.65),37);
+				in.add(new OOPProduct("Fire Ball",130.39), 7);
+				in.add(new OOPProduct("Shell Repair Kit", 183.65),2);
 				in.add(new OOPProduct("Peach Body Pillow",122.57),6);
 				
 				runInvoice(c,in); //runs invoice
@@ -31,18 +31,18 @@ public class OOPTester {
 				//invoice run 3
 				c = new OOPCustomer("ice cave", "Megatron", 6482);
 				in = new OOPInvoice(c);
-				in.add(new OOPProduct("Blaster",33.65), 48);
-				in.add(new OOPProduct("Metal Sword", 172.98),41);
-				in.add(new OOPProduct("Jet Rockets",110.99),18);
+				in.add(new OOPProduct("Blaster",33.65), 7);
+				in.add(new OOPProduct("Metal Sword", 172.98),16);
+				in.add(new OOPProduct("Jet Rockets",110.99),3);
 				
 				runInvoice(c,in); //runs invoice
 				
 				//invoice run 4
 				c = new OOPCustomer("Gotham City", "Joker", 5112);
 				in = new OOPInvoice(c);
-				in.add(new OOPProduct("Explosive Balloons",174.34), 46);
-				in.add(new OOPProduct("Razor Sharp Playing Cards", 177.97),42);
-				in.add(new OOPProduct("Gun",165.70),39);
+				in.add(new OOPProduct("Explosive Balloons",174.34), 20);
+				in.add(new OOPProduct("Razor Sharp Playing Cards", 177.97),11);
+				in.add(new OOPProduct("Gun",165.70),5);
 				
 				runInvoice(c,in); //runs invoice
 				
@@ -53,13 +53,14 @@ public class OOPTester {
 				i.printInvoice();
 
 				if(c.getEvilFunds()- i.amountDue() < 0) {
-					System.out.println("Evil villian credit union to the rescue!!");	
+					System.out.println("Purchase Not Approved! \nEvil villian credit union to the rescue!!");	
 					c.addFunds(i.amountDue() - c.getEvilFunds());
 					System.out.println("New funds total: $" + (new DecimalFormat("##.00").format(c.getEvilFunds())));
 					System.out.println();
+					
+					i.printInvoice();
 				}
-				
-				i.printInvoice();
+			
 			}//end runInvoice
 
 

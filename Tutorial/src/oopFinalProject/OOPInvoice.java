@@ -20,14 +20,14 @@ public class OOPInvoice {
 			System.out.println(theCustomer.toString());
 			System.out.println();
 			for(int i = 0; i < items.size(); i++) {
-				System.out.printf(items.get(i).toString() + "\n Total: $%.2f\n", 
+				System.out.printf(items.get(i).toString() + "\n  Total: $%.2f\n", 
 			 (items.get(i).getTheProduct().getPrice() * items.get(i).getQty()));
 				System.out.println();
 			}
 			System.out.printf("Total Amount Due: $%.2f\n" , amountDue());
 			System.out.println();
 			
-			if(canAfford() == true) {
+			if(canAfford(theCustomer) == true) {
 				System.out.println("Purchase Approved!");
 			}
 	
