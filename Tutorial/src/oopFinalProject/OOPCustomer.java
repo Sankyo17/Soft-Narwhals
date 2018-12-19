@@ -46,7 +46,8 @@ public class OOPCustomer {
 	 */
 	public String toString() {
 		return "Current Order: \n Name: " + name + "\n  Address: " +
-	address + "\n  Evil Funds: $" + (new DecimalFormat("##.00").format(getEvilFunds()));
+				address + "\n  Evil Funds: $" 
+				+ (new DecimalFormat("##.00").format(getEvilFunds()));
 	}//end toString
 	/**
 	 * Adds funds to evilFunds

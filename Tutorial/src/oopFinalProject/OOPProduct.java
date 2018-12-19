@@ -36,7 +36,8 @@ public class OOPProduct {
 	 * @return product and price of product
 	 */
 	public String toString() {
-		return " Product name: " + productName + "\n  Price: $" + (new DecimalFormat("##.00").format(getPrice()));
+		return " Product name: " + productName + "\n  Price: $" 
+				+ (new DecimalFormat("##.00").format(getPrice()));
 	}//end toString
 
 }//end OOPProduct
