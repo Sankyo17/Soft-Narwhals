@@ -82,6 +82,7 @@ public class Assign5Translator {
 						} //end if
 						exitChoice = 0;
 					}//end for 
+						
 						System.out.println("\nWould you like to translate another word?\n 1. Yes \n 2. No");
 						exitChoice = scanInt.nextInt();
 						if(exitChoice == 1) {
