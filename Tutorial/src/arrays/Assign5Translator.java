@@ -45,7 +45,7 @@ public class Assign5Translator {
 						" to your personal Japanese translator!");
 				System.out.println();
 			
-				do {
+				while (exitChoice != 2) {
 					System.out.println("These are the words I am able to translate into Japanese: \nGreetings: ");
 					for(int i = 0; i < 3; i++) {
 						System.out.println(" " + englishWords[i]);
@@ -70,7 +70,7 @@ public class Assign5Translator {
 					for(int i = 5; i < 9; i++) {
 						System.out.println(" " + englishWords[i]);
 					}//end for
-				}while (exitChoice != 2); {
+				
 					System.out.println();
 					System.out.println("Please enter the word you would like to translate: ");
 					wordChoice = scanWords.nextLine();
@@ -79,11 +79,11 @@ public class Assign5Translator {
 					for(int i = 0; i < englishWords.length; i++) {
 						if (wordChoice.equals(englishWords[i])) {
 							System.out.println(wordChoice + " in Japanese is: " + japaneseWords[i]);
-						} else { 
-							System.out.println("That is not a valid word!");
-						}//end if
+						} //end if
+						exitChoice = 0;
 					}//end for 
-						System.out.println("Would you like to translate another word?\n 1. Yes \n 2. No");
+						System.out.println("\nWould you like to translate another word?\n 1. Yes \n 2. No");
+						exitChoice = scanInt.nextInt();
 						if(exitChoice == 1) {
 							exitChoice = 1;	
 						}else if(exitChoice == 2) {
