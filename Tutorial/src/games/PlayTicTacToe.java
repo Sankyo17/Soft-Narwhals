@@ -132,6 +132,7 @@ public class PlayTicTacToe {
 		}
 	}//end ready
 	public static void startGame(int playerOneReady , int PlayerTwoReady) {
+		token = '-';
 		Scanner in = new Scanner(System.in);
 		while(playerOneReady == 1 && playerTwoReady == 1) {
 		char[][]board = new char [3][3];
