@@ -20,13 +20,13 @@ public class Assign5Translator {
 				"ramen" , "aisukurimu" , "mizu" , 
 				"haretta" , "ame no" , "yukigafuru"};
 		
-		
 		Scanner scanWords = new Scanner(System.in);
 		Scanner scanInt = new Scanner(System.in);
 		String name = " ";
 		String wordChoice = " ";
 		int languageChoice;
 		int exitChoice;
+		boolean found = false;
 		//int choiceOne = 1;
 		
 		System.out.println("What is your name Traveller?");
@@ -74,25 +74,31 @@ public class Assign5Translator {
 					System.out.println();
 					System.out.println("Please enter the word you would like to translate: ");
 					wordChoice = scanWords.nextLine();
-					wordChoice.toLowerCase();
 				
 					for(int i = 0; i < englishWords.length; i++) {
-						if (wordChoice.equals(englishWords[i])) {
+						if (wordChoice.toLowerCase().equals(englishWords[i])) {
 							System.out.println(wordChoice + " in Japanese is: " + japaneseWords[i]);
+							found = true;
 						} //end if
 						exitChoice = 0;
 					}//end for 
+					if (found == false) {
+						System.out.println("Word not found");
+					}//end if
+					
+						found = false;
 						
 						System.out.println("\nWould you like to translate another word?\n 1. Yes \n 2. No");
 						exitChoice = scanInt.nextInt();
 						if(exitChoice == 1) {
 							exitChoice = 1;	
 						}else if(exitChoice == 2) {
+							System.out.println("Goodbye!");
 							exitChoice = 2;
 						}//end if
 				}//end while
 			} else if (languageChoice == 2) {
-				do {
+				while (exitChoice != 2) {
 					System.out.println("These are the words I am able to translate into English: \nGreetings: ");
 					for(int i = 0; i < 3; i++) {
 						System.out.println(" " + japaneseWordsLetters[i]);
@@ -117,23 +123,28 @@ public class Assign5Translator {
 					for(int i = 5; i < 9; i++) {
 						System.out.println(" " + japaneseWordsLetters[i]);
 					}//end for
-				} while (exitChoice != 0); {
+				 
 					System.out.println();
 					System.out.println("Please enter the word you would like to translate: ");
 					wordChoice = scanWords.nextLine();
-					wordChoice.toLowerCase();
 			
 					for(int i = 0; i < japaneseWordsLetters.length; i++) {
-						if (wordChoice.equals(japaneseWordsLetters[i])) {
+						if (wordChoice.toLowerCase().equals(japaneseWordsLetters[i])) {
 							System.out.println(wordChoice + " in English is: " + englishWords[i]);
-						} else { 
-							System.out.println("That is not a valid word!");
-						}//end if
+							found = true;
+						} //end if
 					}//end for 
-						System.out.println("Would you like to translate another word?\n 1. Yes \n 2. No");
+					if (found == false) {
+						System.out.println("Word not found");
+					}//end if
+						found = false;
+						
+						System.out.println("\nWould you like to translate another word?\n 1. Yes \n 2. No");
+						exitChoice = scanInt.nextInt();
 						if(exitChoice == 1) {
 							exitChoice = 1;	
 						}else if(exitChoice == 2) {
+							System.out.println("Goodbye!");
 							exitChoice = 2;
 						}//end if
 				}//end nested while
